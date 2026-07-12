@@ -1,3 +1,7 @@
+output "web_pubsub_shared_private_link_resources_id" {
+  description = "Map of id values across all web_pubsub_shared_private_link_resources, keyed the same as var.web_pubsub_shared_private_link_resources"
+  value       = { for k, v in azurerm_web_pubsub_shared_private_link_resource.web_pubsub_shared_private_link_resources : k => v.id }
+}
 output "web_pubsub_shared_private_link_resources_name" {
   description = "Map of name values across all web_pubsub_shared_private_link_resources, keyed the same as var.web_pubsub_shared_private_link_resources"
   value       = { for k, v in azurerm_web_pubsub_shared_private_link_resource.web_pubsub_shared_private_link_resources : k => v.name }
